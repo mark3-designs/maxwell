@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.zendesk</groupId>
+  <groupId>com.steckytech</groupId>
   <artifactId>maxwell</artifactId>
   <version>1.27.0</version>
   <packaging>jar</packaging>
@@ -31,6 +31,16 @@
         <role>Developer</role>
       </roles>
     </developer>
+    <developer>
+      <id>bmorse</id>
+      <name>Brad Morse</name>
+      <email>brad@morsecode-inc.com</email>
+      <organization>Mark3-Designs</organization>
+      <roles>
+        <role>Project-Administrator</role>
+        <role>Developer</role>
+      </roles>
+    </developer>
   </developers>
 
   <scm>
@@ -44,6 +54,7 @@
   </properties>
 
   <profiles>
+    <!--
     <profile>
       <id>kafka-0.8.2.2</id>
       <dependencies>
@@ -74,6 +85,7 @@
         </dependency>
       </dependencies>
     </profile>
+    -->
     <profile>
       <id>kafka-0.10.2.1</id>
       <dependencies>
@@ -314,6 +326,7 @@
   <build>
     <plugins>
       <!-- horrible sonatype plugins -->
+      <!--
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -339,6 +352,7 @@
           </execution>
         </executions>
       </plugin>
+      -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
