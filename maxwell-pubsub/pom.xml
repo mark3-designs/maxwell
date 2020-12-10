@@ -62,4 +62,23 @@
             </plugin>
         </plugins>
     </build>
+  <distributionManagement>
+    <repository>
+      <id>cyberdyne</id>
+      <name>Cyberdyne Maven Repository</name>
+      <url>http://artifacts.cyberdyne/repository/cyberdyne</url>
+    </repository>
+  </distributionManagement>
+  <repositories>
+    <repository>
+      <id>cyberdyne</id>
+      <name>Cyberdyne Maven Repository</name>
+      <url>http://artifacts.cyberdyne/repository/cyberdyne</url>
+    </repository>
+    <repository>
+      <id>maven-cache</id>
+      <name>Maven-Cached Repository</name>
+      <url>http://artifacts.cyberdyne/repository/maven-cache</url>
+    </repository>
+  </repositories>
 </project>
