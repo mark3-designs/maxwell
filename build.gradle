@@ -5,6 +5,8 @@ plugins {
     id 'antlr'
 }
 
+apply plugin: 'maven-publish'
+
 group = 'com.steckytech'
 version = '1.27.0'
 
