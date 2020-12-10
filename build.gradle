@@ -23,8 +23,8 @@ generateGrammarSource {
  */
 
 repositories {
-        
-     maven { url "https://repo.maven.apache.org/maven2" }
+    maven { url "http://artifacts.cyberdyne/repository/cyberdyne" }
+    maven { url "http://artifacts.cyberdyne/repository/maven-cache" }
 }
 dependencies {
     compile group: 'com.mchange', name: 'c3p0', version:'0.9.5.5'
@@ -68,3 +68,23 @@ dependencies {
     testCompile group: 'org.mockito', name: 'mockito-core', version:'3.3.3'
     testCompile group: 'com.github.stefanbirkner', name: 'system-rules', version:'1.18.0'
 }
+try {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                from components.java
+            }
+        }
+        repositories {
+            maven {
+                url = version.endsWith('SNAPSHOT') ? "$repo_snapshots" : "$repo_releases"
+                credentials {
+                    username = "$repo_user"
+                    password = "$repo_pass"
+                }
+                authentication { basic(BasicAuthentication) }
+            }
+        }
+    }
+} catch (Exception ignore) {}
+
