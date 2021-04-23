@@ -15,3 +15,7 @@ config/*.yml
 .settings/
 .factorypath
 .sts4-cache/
+/.gradle
+/gradle
+/gradlew*
+/build

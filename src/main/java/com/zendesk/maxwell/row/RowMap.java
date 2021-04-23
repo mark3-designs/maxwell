@@ -96,6 +96,11 @@ public class RowMap implements Serializable {
 		return rowIdentity;
 	}
 
+	/* 2020-07-05 Brad Morse: expose list of pk columns */
+	public List<String> pkColumns() {
+		return pkColumns;
+	}
+
 	public String pkToJson(KeyFormat format) throws IOException {
 		return getRowIdentity().toKeyJson(format);
 	}
